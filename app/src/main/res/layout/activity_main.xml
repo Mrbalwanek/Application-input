@@ -43,7 +43,7 @@
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:backgroundTint="@color/purple_primary" />
+            android:backgroundTint="@color/material_dynamic_secondary20" />
 
         <Button
             android:layout_width="0dp"
@@ -55,7 +55,7 @@
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:backgroundTint="@color/purple_primary" />
+            android:backgroundTint="@color/material_dynamic_secondary20" />
     </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
