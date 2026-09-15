@@ -5,8 +5,11 @@
 
     <color name="purple_primary">#6C3CE9</color>
     <color name="purple_primary_dark">#4B2AAE</color>
+    <color name="purple_container">#EDE4FB</color>
     <color name="purple_background">#F5F1FC</color>
+    <color name="surface">#FFFFFF</color>
     <color name="text_dark">#241442</color>
     <color name="text_muted">#7A6C99</color>
     <color name="hint_muted">#A99BC9</color>
+    <color name="outline">#E1D9F5</color>
 </resources>

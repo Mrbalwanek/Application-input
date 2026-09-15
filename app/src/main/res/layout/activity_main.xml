@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,55 +7,66 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="24dp"
     android:background="@color/purple_background"
+    android:paddingHorizontal="32dp"
     tools:context=".MainActivity">
 
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/purple_primary"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="IP"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="INPUT"
-        android:textSize="32sp"
+        android:text="InPut"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/text_dark"
-        android:layout_marginBottom="6dp" />
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Twój własny paczkomat!"
+        android:text="Twój własny paczkomat"
         android:textSize="15sp"
         android:textColor="@color/text_muted"
-        android:layout_marginBottom="32dp" />
+        android:gravity="center"
+        android:layout_marginBottom="48dp" />
 
-    <LinearLayout
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="56dp"
+        android:text="Zarejestruj się"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        app:cornerRadius="16dp"
+        android:layout_marginBottom="12dp" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="54dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp"
-            android:id="@+id/btn1"
-            android:text="Zarejestruj się"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/purple_primary" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn2"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Zaloguj się"
+        android:textSize="16sp"
+        android:textColor="@color/purple_primary"
+        android:textAllCaps="false"
+        app:strokeColor="@color/purple_primary"
+        app:cornerRadius="16dp" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="54dp"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:id="@+id/btn2"
-            android:text="Zaloguj się"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/purple_primary" />
-    </LinearLayout>
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

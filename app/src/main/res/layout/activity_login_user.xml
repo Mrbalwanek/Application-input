@@ -1,94 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
-        android:padding="24dp"
         android:background="@color/purple_background"
         tools:context=".LoginUserActivity">
 
-    <TextView
-            android:id="@+id/btnBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:text="← Wstecz"
-            android:textColor="@color/purple_primary"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:clickable="true"
-            android:focusable="true"
-            android:padding="8dp"
-            android:layout_marginBottom="12dp" />
-
-    <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="InPut"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="@color/text_dark"
-            android:layout_marginBottom="6dp" />
-
-    <TextView
-            android:id="@+id/tvSubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Logowanie użytkownika"
-            android:textSize="15sp"
-            android:textColor="@color/text_muted"
-            android:layout_marginBottom="32dp" />
-
-    <EditText
-            android:id="@+id/etLogin"
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:hint="Login lub e-mail"
-            android:inputType="text"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:textColor="@color/text_dark"
-            android:textColorHint="@color/hint_muted"
-            android:layout_marginBottom="16dp" />
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_primary"
+            app:title="Logowanie użytkownika"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/white" />
 
-    <EditText
-            android:id="@+id/etPassword"
+    <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:hint="Hasło"
-            android:inputType="textPassword"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:textColor="@color/text_dark"
-            android:textColorHint="@color/hint_muted"
-            android:layout_marginBottom="28dp" />
+            android:layout_height="match_parent">
 
-    <Button
-            android:id="@+id/btnSubmit"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="Zaloguj się"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/purple_primary" />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
 
-    <TextView
-            android:id="@+id/tvGoRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nie masz konta? Zarejestruj się"
-            android:textColor="@color/purple_primary"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:clickable="true"
-            android:focusable="true"
-            android:padding="12dp"
-            android:layout_marginTop="20dp" />
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/outline"
+                    app:cardBackgroundColor="@color/surface">
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zaloguj się do konta InPut"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_muted"
+                            android:layout_marginBottom="20dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilLogin"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Login lub e-mail"
+                            app:startIconDrawable="@drawable/ic_person"
+                            app:boxCornerRadiusTopStart="14dp"
+                            app:boxCornerRadiusTopEnd="14dp"
+                            app:boxCornerRadiusBottomStart="14dp"
+                            app:boxCornerRadiusBottomEnd="14dp"
+                            android:layout_marginBottom="16dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etLogin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPassword"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Hasło"
+                            app:startIconDrawable="@drawable/ic_lock"
+                            app:endIconMode="password_toggle"
+                            app:boxCornerRadiusTopStart="14dp"
+                            app:boxCornerRadiusTopEnd="14dp"
+                            app:boxCornerRadiusBottomStart="14dp"
+                            app:boxCornerRadiusBottomEnd="14dp"
+                            android:layout_marginBottom="24dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSubmit"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:text="Zaloguj się"
+                            android:textSize="16sp"
+                            android:textAllCaps="false"
+                            app:cornerRadius="16dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tvGoRegister"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Nie masz konta? Zarejestruj się"
+                    android:textColor="@color/purple_primary"
+                    android:textAllCaps="false" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

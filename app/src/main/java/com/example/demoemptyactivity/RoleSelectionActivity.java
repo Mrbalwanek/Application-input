@@ -2,13 +2,16 @@ package com.example.demoemptyactivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.card.MaterialCardView;
 
 public class RoleSelectionActivity extends AppCompatActivity {
 
@@ -22,21 +25,25 @@ public class RoleSelectionActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_role_selection);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        View root = findViewById(R.id.main);
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+
+        ViewCompat.setOnApplyWindowInsetsListener(root, (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            toolbar.setPadding(toolbar.getPaddingLeft(), systemBars.top, toolbar.getPaddingRight(), toolbar.getPaddingBottom());
+            v.setPadding(0, 0, 0, systemBars.bottom);
             return insets;
         });
 
+        toolbar.setNavigationOnClickListener(v -> finish());
+
         String mode = getIntent().getStringExtra(EXTRA_MODE);
 
-        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
+        MaterialCardView cardUser = findViewById(R.id.cardUser);
+        MaterialCardView cardCourier = findViewById(R.id.cardCourier);
 
-        Button btnUser = findViewById(R.id.btnUser);
-        Button btnCourier = findViewById(R.id.btnCourier);
-
-        btnUser.setOnClickListener(v -> openTarget(mode, false));
-        btnCourier.setOnClickListener(v -> openTarget(mode, true));
+        cardUser.setOnClickListener(v -> openTarget(mode, false));
+        cardCourier.setOnClickListener(v -> openTarget(mode, true));
     }
 
     private void openTarget(String mode, boolean isCourier) {
