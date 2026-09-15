@@ -3,13 +3,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="purple_primary">#6C3CE9</color>
-    <color name="purple_primary_dark">#4B2AAE</color>
-    <color name="purple_container">#EDE4FB</color>
-    <color name="purple_background">#F5F1FC</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="text_dark">#241442</color>
-    <color name="text_muted">#7A6C99</color>
-    <color name="hint_muted">#A99BC9</color>
-    <color name="outline">#E1D9F5</color>
+    <color name="neon_green">#39FF14</color>
+    <color name="hot_pink">#FF1493</color>
+    <color name="bright_red">#FF0000</color>
+    <color name="bright_blue">#0000FF</color>
+    <color name="bright_yellow">#FFFF00</color>
+    <color name="orange">#FFA500</color>
+    <color name="purple_primary">#8A2BE2</color>
 </resources>

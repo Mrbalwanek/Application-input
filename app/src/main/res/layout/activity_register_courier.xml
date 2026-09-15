@@ -1,111 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/purple_background"
+        android:padding="16dp"
+        android:background="@color/hot_pink"
         tools:context=".RegisterCourierActivity">
 
-    <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
+    <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;--- NAZAD"
+            android:textColor="@color/bright_red"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+
+    <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REJESTRACJA KURIERA"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/bright_blue"
+            android:rotation="2"
+            android:layout_marginTop="10dp" />
+
+    <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wypelnij formularz zeby zostac kurierem :)"
+            android:textSize="9sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="30dp" />
+
+    <EditText
+            android:id="@+id/etLogin"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/purple_primary"
-            app:title="Rejestracja kuriera"
-            app:titleTextColor="@color/white"
-            app:navigationIcon="@drawable/ic_arrow_back"
-            app:navigationIconTint="@color/white" />
+            android:layout_height="wrap_content"
+            android:hint="wpisz login xd"
+            android:inputType="text"
+            android:textColor="@color/bright_red"
+            android:textColorHint="@color/bright_red"
+            android:background="@color/orange"
+            android:padding="10dp"
+            android:layout_marginBottom="14dp" />
 
-    <androidx.core.widget.NestedScrollView
+    <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:hint="haslo"
+            android:inputType="textPassword"
+            android:textColor="@color/bright_red"
+            android:textColorHint="@color/bright_red"
+            android:background="@color/orange"
+            android:padding="10dp"
+            android:layout_marginBottom="30dp" />
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="24dp">
-
-            <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="0dp"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@color/outline"
-                    app:cardBackgroundColor="@color/surface">
-
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="24dp">
-
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Załóż konto kuriera InPut"
-                            android:textSize="14sp"
-                            android:textColor="@color/text_muted"
-                            android:layout_marginBottom="20dp" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/tilLogin"
-                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Numer telefonu lub login"
-                            app:startIconDrawable="@drawable/ic_person"
-                            app:boxCornerRadiusTopStart="14dp"
-                            app:boxCornerRadiusTopEnd="14dp"
-                            app:boxCornerRadiusBottomStart="14dp"
-                            app:boxCornerRadiusBottomEnd="14dp"
-                            android:layout_marginBottom="16dp">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/etLogin"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="text" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/tilPassword"
-                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Hasło"
-                            app:startIconDrawable="@drawable/ic_lock"
-                            app:endIconMode="password_toggle"
-                            app:boxCornerRadiusTopStart="14dp"
-                            app:boxCornerRadiusTopEnd="14dp"
-                            app:boxCornerRadiusBottomStart="14dp"
-                            app:boxCornerRadiusBottomEnd="14dp"
-                            android:layout_marginBottom="24dp">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/etPassword"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="textPassword" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnSubmit"
-                            android:layout_width="match_parent"
-                            android:layout_height="56dp"
-                            android:text="Zatwierdź"
-                            android:textSize="16sp"
-                            android:textAllCaps="false"
-                            app:cornerRadius="16dp" />
-
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="ZATWIERDŹ!!!"
+            android:textSize="16sp"
+            android:textColor="@color/bright_yellow"
+            android:backgroundTint="@color/bright_blue"
+            android:rotation="-3" />
 
 </LinearLayout>
