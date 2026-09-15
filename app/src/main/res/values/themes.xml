@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.DemoEmptyActivity" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/bright_red</item>
-        <item name="android:windowBackground">@color/neon_green</item>
+        <item name="colorPrimary">@color/neon_purple</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
     </style>
 
     <style name="Theme.DemoEmptyActivity" parent="Base.Theme.DemoEmptyActivity" />

@@ -3,11 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="neon_green">#39FF14</color>
-    <color name="hot_pink">#FF1493</color>
-    <color name="bright_red">#FF0000</color>
-    <color name="bright_blue">#0000FF</color>
-    <color name="bright_yellow">#FFFF00</color>
-    <color name="orange">#FFA500</color>
-    <color name="purple_primary">#8A2BE2</color>
+    <color name="bg_dark">#120821</color>
+    <color name="surface_dark">#1E1233</color>
+    <color name="field_dark">#2A1B45</color>
+    <color name="neon_pink">#FF2DAF</color>
+    <color name="neon_purple">#8B5CF6</color>
+    <color name="neon_cyan">#00E5FF</color>
+    <color name="text_light">#FFFFFF</color>
+    <color name="text_muted_light">#B8AED9</color>
 </resources>

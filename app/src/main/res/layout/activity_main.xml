@@ -6,48 +6,65 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/neon_green"
+    android:background="@color/bg_dark"
+    android:paddingHorizontal="32dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="INPUT!!!"
-        android:textSize="48sp"
-        android:textStyle="bold|italic"
-        android:fontFamily="monospace"
-        android:textColor="@color/bright_red"
-        android:rotation="-6"
-        android:layout_marginBottom="2dp" />
+    <FrameLayout
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:background="@drawable/gradient_tile"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="IP"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </FrameLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="twoj wlasny paczkomat xD"
-        android:textSize="10sp"
-        android:textColor="@color/bright_blue"
-        android:layout_marginBottom="40dp" />
-
-    <Button
-        android:layout_width="260dp"
-        android:layout_height="70dp"
-        android:id="@+id/btn1"
-        android:text="ZAREJESTRUJ SIĘ!!! 🔥"
-        android:textSize="18sp"
-        android:textColor="@color/bright_yellow"
-        android:backgroundTint="@color/hot_pink"
-        android:rotation="3"
+        android:text="InPut 🔥"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_light"
         android:layout_marginBottom="6dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6 7 💀 twój własny paczkomat, fr fr"
+        android:textSize="14sp"
+        android:textColor="@color/neon_cyan"
+        android:gravity="center"
+        android:layout_marginBottom="48dp" />
+
     <Button
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:layout_gravity="end"
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/gradient_button"
+        android:text="ZAREJESTRUJ SIĘ 🗿"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="14dp" />
+
+    <Button
         android:id="@+id/btn2"
-        android:text="zaloguj sie"
-        android:textSize="12sp"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/orange"
-        android:layout_marginEnd="20dp" />
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/outline_button"
+        android:text="ZALOGUJ SIĘ 💯"
+        android:textColor="@color/neon_cyan"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false" />
 
 </LinearLayout>

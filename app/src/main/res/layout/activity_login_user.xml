@@ -5,87 +5,109 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:background="@color/bright_blue"
+        android:background="@color/bg_dark"
         tools:context=".LoginUserActivity">
 
-    <TextView
-            android:id="@+id/btnBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="&lt;--- NAZAD"
-            android:textColor="@color/bright_red"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:clickable="true"
-            android:focusable="true" />
-
-    <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="logowanie uzytkownika"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:textColor="@color/bright_blue"
-            android:rotation="2"
-            android:layout_marginTop="10dp" />
-
-    <TextView
-            android:id="@+id/tvSubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="no dawaj loguj sie"
-            android:textSize="9sp"
-            android:textColor="@color/black"
-            android:layout_marginBottom="30dp" />
-
-    <EditText
-            android:id="@+id/etLogin"
+    <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="login"
-            android:inputType="text"
-            android:textColor="@color/purple_primary"
-            android:textColorHint="@color/purple_primary"
-            android:background="@color/bright_yellow"
-            android:padding="10dp"
-            android:layout_marginBottom="14dp" />
+            android:layout_height="match_parent">
 
-    <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="haslo"
-            android:inputType="textPassword"
-            android:textColor="@color/purple_primary"
-            android:textColorHint="@color/purple_primary"
-            android:background="@color/bright_yellow"
-            android:padding="10dp"
-            android:layout_marginBottom="30dp" />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
 
-    <Button
-            android:id="@+id/btnSubmit"
-            android:layout_width="220dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:text="ZALOGUJ SIĘ!!!"
-            android:textSize="16sp"
-            android:textColor="@color/bright_yellow"
-            android:backgroundTint="@color/bright_blue"
-            android:rotation="-3"
-            android:layout_marginBottom="20dp" />
+            <TextView
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⬅️ nazad"
+                    android:textColor="@color/neon_cyan"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="20dp" />
 
-    <TextView
-            android:id="@+id/tvGoRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="nie masz konta? zarejestruj sie"
-            android:textColor="@color/black"
-            android:textSize="8sp"
-            android:clickable="true"
-            android:focusable="true" />
+            <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logowanie użytkownika 🧍"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_light"
+                    android:layout_marginBottom="4dp" />
+
+            <TextView
+                    android:id="@+id/tvSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="witaj z powrotem, no cap"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_muted_light"
+                    android:layout_marginBottom="24dp" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_glow"
+                    android:padding="20dp">
+
+                <EditText
+                        android:id="@+id/etLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="login lub e-mail"
+                        android:inputType="text"
+                        android:background="@drawable/field_bg"
+                        android:textColor="@color/text_light"
+                        android:textColorHint="@color/text_muted_light"
+                        android:padding="14dp"
+                        android:layout_marginBottom="14dp" />
+
+                <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="hasło 🔒"
+                        android:inputType="textPassword"
+                        android:background="@drawable/field_bg"
+                        android:textColor="@color/text_light"
+                        android:textColorHint="@color/text_muted_light"
+                        android:padding="14dp"
+                        android:layout_marginBottom="20dp" />
+
+                <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@drawable/gradient_button"
+                        android:text="ZALOGUJ SIĘ 🚀"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/tvGoRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="6 7, nie masz konta? zarejestruj się 💀"
+                    android:textColor="@color/neon_cyan"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="12dp"
+                    android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

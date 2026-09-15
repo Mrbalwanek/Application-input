@@ -40,16 +40,16 @@ public class RegisterCourierActivity extends AppCompatActivity {
             String password = etPassword.getText().toString().trim();
 
             if (login.isEmpty()) {
-                etLogin.setError("no wpisz cos!!!");
+                etLogin.setError("brakuje loginu 💀");
                 etLogin.requestFocus();
             } else if (password.isEmpty()) {
-                etPassword.setError("no wpisz haslo no!!!");
+                etPassword.setError("hasło gdzie? 👀");
                 etPassword.requestFocus();
             } else if (password.length() < 4) {
-                etPassword.setError("za krotkie!!!1");
+                etPassword.setError("za krótkie, dorzuć znaków 📈");
                 etPassword.requestFocus();
             } else {
-                Toast.makeText(RegisterCourierActivity.this, "zarejestrowano xd: " + login, Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterCourierActivity.this, "zarejestrowano, essa 🔥: " + login, Toast.LENGTH_SHORT).show();
             }
         });
     }

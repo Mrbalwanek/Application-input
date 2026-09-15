@@ -40,16 +40,16 @@ public class RegisterUserActivity extends AppCompatActivity {
             String password = etPassword.getText().toString().trim();
 
             if (login.isEmpty()) {
-                etLogin.setError("brakuje loginu!!!");
+                etLogin.setError("brakuje loginu 💀");
                 etLogin.requestFocus();
             } else if (password.isEmpty()) {
-                etPassword.setError("no wpisz haslo no!!!");
+                etPassword.setError("hasło gdzie? 👀");
                 etPassword.requestFocus();
             } else if (password.length() < 4) {
-                etPassword.setError("za krotkie!!!1");
+                etPassword.setError("za krótkie, dorzuć znaków 📈");
                 etPassword.requestFocus();
             } else {
-                Toast.makeText(RegisterUserActivity.this, "git git zarejestrowano: " + login, Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterUserActivity.this, "zarejestrowano, no cap: " + login, Toast.LENGTH_SHORT).show();
             }
         });
     }

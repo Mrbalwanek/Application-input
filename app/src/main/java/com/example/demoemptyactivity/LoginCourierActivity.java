@@ -43,13 +43,13 @@ public class LoginCourierActivity extends AppCompatActivity {
             String password = etPassword.getText().toString().trim();
 
             if (login.isEmpty()) {
-                etLogin.setError("no wpisz cos!!!");
+                etLogin.setError("brakuje loginu 💀");
                 etLogin.requestFocus();
             } else if (password.isEmpty()) {
-                etPassword.setError("haslo gdzie???");
+                etPassword.setError("hasło gdzie? 👀");
                 etPassword.requestFocus();
             } else {
-                Toast.makeText(LoginCourierActivity.this, "zalogowano xd: " + login, Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginCourierActivity.this, "zalogowano, essa 🔥: " + login, Toast.LENGTH_SHORT).show();
             }
         });
     }
