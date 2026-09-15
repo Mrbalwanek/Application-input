@@ -23,13 +23,13 @@ public class RegisterUserActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register_user);
 
+        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
 
         etLogin = findViewById(R.id.etLogin);
         etPassword = findViewById(R.id.etPassword);
@@ -40,16 +40,17 @@ public class RegisterUserActivity extends AppCompatActivity {
             String password = etPassword.getText().toString().trim();
 
             if (login.isEmpty()) {
-                etLogin.setError("brakuje loginu 💀");
+                etLogin.setError("Podaj login lub e-mail!");
                 etLogin.requestFocus();
             } else if (password.isEmpty()) {
-                etPassword.setError("hasło gdzie? 👀");
+                etPassword.setError("Wpisz hasło!");
                 etPassword.requestFocus();
             } else if (password.length() < 4) {
-                etPassword.setError("za krótkie, dorzuć znaków 📈");
+                etPassword.setError("Hasło musi mieć co najmniej 4 znaki!");
                 etPassword.requestFocus();
             } else {
-                Toast.makeText(RegisterUserActivity.this, "zarejestrowano, no cap: " + login, Toast.LENGTH_SHORT).show();
+                String message = "Zarejestrowano pomyślnie: " + login;
+                Toast.makeText(RegisterUserActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         });
     }

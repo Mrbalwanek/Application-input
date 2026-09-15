@@ -3,12 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="bg_dark">#120821</color>
-    <color name="surface_dark">#1E1233</color>
-    <color name="field_dark">#2A1B45</color>
-    <color name="neon_pink">#FF2DAF</color>
-    <color name="neon_purple">#8B5CF6</color>
-    <color name="neon_cyan">#00E5FF</color>
-    <color name="text_light">#FFFFFF</color>
-    <color name="text_muted_light">#B8AED9</color>
+    <color name="purple_primary">#6C3CE9</color>
+    <color name="purple_primary_dark">#4B2AAE</color>
+    <color name="purple_background">#F5F1FC</color>
+    <color name="text_dark">#241442</color>
+    <color name="text_muted">#7A6C99</color>
+    <color name="hint_muted">#A99BC9</color>
 </resources>

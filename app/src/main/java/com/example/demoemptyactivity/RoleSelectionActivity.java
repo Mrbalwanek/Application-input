@@ -2,7 +2,7 @@ package com.example.demoemptyactivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,15 +28,15 @@ public class RoleSelectionActivity extends AppCompatActivity {
             return insets;
         });
 
-        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
-
         String mode = getIntent().getStringExtra(EXTRA_MODE);
 
-        View cardUser = findViewById(R.id.cardUser);
-        View cardCourier = findViewById(R.id.cardCourier);
+        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
 
-        cardUser.setOnClickListener(v -> openTarget(mode, false));
-        cardCourier.setOnClickListener(v -> openTarget(mode, true));
+        Button btnUser = findViewById(R.id.btnUser);
+        Button btnCourier = findViewById(R.id.btnCourier);
+
+        btnUser.setOnClickListener(v -> openTarget(mode, false));
+        btnCourier.setOnClickListener(v -> openTarget(mode, true));
     }
 
     private void openTarget(String mode, boolean isCourier) {

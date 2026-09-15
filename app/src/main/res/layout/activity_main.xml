@@ -1,70 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/bg_dark"
-    android:paddingHorizontal="32dp"
+    android:padding="24dp"
+    android:background="@color/purple_background"
     tools:context=".MainActivity">
-
-    <FrameLayout
-        android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:background="@drawable/gradient_tile"
-        android:layout_marginBottom="20dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="IP"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-    </FrameLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="InPut 🔥"
+        android:text="INPUT"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="@color/text_light"
+        android:textColor="@color/text_dark"
         android:layout_marginBottom="6dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="6 7 💀 twój własny paczkomat, fr fr"
-        android:textSize="14sp"
-        android:textColor="@color/neon_cyan"
-        android:gravity="center"
-        android:layout_marginBottom="48dp" />
+        android:text="Twój własny paczkomat!"
+        android:textSize="15sp"
+        android:textColor="@color/text_muted"
+        android:layout_marginBottom="32dp" />
 
-    <Button
-        android:id="@+id/btn1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:background="@drawable/gradient_button"
-        android:text="ZAREJESTRUJ SIĘ 🗿"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:layout_marginBottom="14dp" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:background="@drawable/outline_button"
-        android:text="ZALOGUJ SIĘ 💯"
-        android:textColor="@color/neon_cyan"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textAllCaps="false" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/btn1"
+            android:text="Zarejestruj się"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple_primary" />
 
-</LinearLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:id="@+id/btn2"
+            android:text="Zaloguj się"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple_primary" />
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

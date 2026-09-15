@@ -24,15 +24,15 @@ public class LoginCourierActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login_courier);
 
+        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
+        findViewById(R.id.tvGoRegister).setOnClickListener(v ->
+                startActivity(new Intent(LoginCourierActivity.this, RegisterCourierActivity.class)));
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
-        findViewById(R.id.tvGoRegister).setOnClickListener(v ->
-                startActivity(new Intent(LoginCourierActivity.this, RegisterCourierActivity.class)));
 
         etLogin = findViewById(R.id.etLogin);
         etPassword = findViewById(R.id.etPassword);
@@ -43,13 +43,14 @@ public class LoginCourierActivity extends AppCompatActivity {
             String password = etPassword.getText().toString().trim();
 
             if (login.isEmpty()) {
-                etLogin.setError("brakuje loginu 💀");
+                etLogin.setError("Podaj login lub numer!");
                 etLogin.requestFocus();
             } else if (password.isEmpty()) {
-                etPassword.setError("hasło gdzie? 👀");
+                etPassword.setError("Wpisz hasło!");
                 etPassword.requestFocus();
             } else {
-                Toast.makeText(LoginCourierActivity.this, "zalogowano, essa 🔥: " + login, Toast.LENGTH_SHORT).show();
+                String message = "Zalogowano pomyślnie: " + login;
+                Toast.makeText(LoginCourierActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         });
     }
