@@ -22,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
         Button registerBtn = findViewById(R.id.btn1);
         Button loginBtn = findViewById(R.id.btn2);
 
+        registerBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
+
         loginBtn.setOnClickListener(v ->{
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
