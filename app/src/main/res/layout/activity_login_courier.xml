@@ -8,8 +8,22 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="24dp"
-        android:background="#F7F7F7"
+        android:background="@color/purple_background"
         tools:context=".LoginCourierActivity">
+
+    <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="← Wstecz"
+            android:textColor="@color/purple_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp" />
 
     <TextView
             android:id="@+id/tvTitle"
@@ -18,7 +32,7 @@
             android:text="InPut Kurier"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:textColor="#1D1D1B"
+            android:textColor="@color/text_dark"
             android:layout_marginBottom="6dp" />
 
     <TextView
@@ -27,7 +41,7 @@
             android:layout_height="wrap_content"
             android:text="Logowanie kuriera"
             android:textSize="15sp"
-            android:textColor="#737373"
+            android:textColor="@color/text_muted"
             android:layout_marginBottom="32dp" />
 
     <EditText
@@ -38,8 +52,8 @@
             android:inputType="text"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:textColor="#1D1D1B"
-            android:textColorHint="#999999"
+            android:textColor="@color/text_dark"
+            android:textColorHint="@color/hint_muted"
             android:layout_marginBottom="16dp" />
 
     <EditText
@@ -50,8 +64,8 @@
             android:inputType="textPassword"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:textColor="#1D1D1B"
-            android:textColorHint="#999999"
+            android:textColor="@color/text_dark"
+            android:textColorHint="@color/hint_muted"
             android:layout_marginBottom="28dp" />
 
     <Button
@@ -61,7 +75,20 @@
             android:text="Zaloguj się"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#1D1D1B"
-            android:backgroundTint="#FFCC00" />
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple_primary" />
+
+    <TextView
+            android:id="@+id/tvGoRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nie masz konta? Zarejestruj się"
+            android:textColor="@color/purple_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="12dp"
+            android:layout_marginTop="20dp" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

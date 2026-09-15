@@ -7,36 +7,55 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/purple_background"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="INPUT"
         android:textSize="32sp"
-        android:text="INPUT" />
+        android:textStyle="bold"
+        android:textColor="@color/text_dark"
+        android:layout_marginBottom="6dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Twój własny paczkomat!"/>
+        android:text="Twój własny paczkomat!"
+        android:textSize="15sp"
+        android:textColor="@color/text_muted"
+        android:layout_marginBottom="32dp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn1"
-        android:text="Zarejestruj się" />
+        android:orientation="horizontal">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn2"
-        android:text="Zaloguj się" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/btn1"
+            android:text="Zarejestruj się"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple_primary" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:id="@+id/btn2"
+            android:text="Zaloguj się"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple_primary" />
     </LinearLayout>
 
-    
 </androidx.appcompat.widget.LinearLayoutCompat>

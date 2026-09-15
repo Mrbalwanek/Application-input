@@ -30,6 +30,8 @@ public class RoleSelectionActivity extends AppCompatActivity {
 
         String mode = getIntent().getStringExtra(EXTRA_MODE);
 
+        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
+
         Button btnUser = findViewById(R.id.btnUser);
         Button btnCourier = findViewById(R.id.btnCourier);
 
