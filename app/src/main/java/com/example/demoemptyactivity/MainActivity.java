@@ -23,12 +23,14 @@ public class MainActivity extends AppCompatActivity {
         Button loginBtn = findViewById(R.id.btn2);
 
         registerBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            Intent intent = new Intent(MainActivity.this, RoleSelectionActivity.class);
+            intent.putExtra(RoleSelectionActivity.EXTRA_MODE, RoleSelectionActivity.MODE_REGISTER);
             startActivity(intent);
         });
 
-        loginBtn.setOnClickListener(v ->{
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        loginBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RoleSelectionActivity.class);
+            intent.putExtra(RoleSelectionActivity.EXTRA_MODE, RoleSelectionActivity.MODE_LOGIN);
             startActivity(intent);
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

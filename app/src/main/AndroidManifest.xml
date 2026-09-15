@@ -13,10 +13,19 @@
         android:theme="@style/Theme.DemoEmptyActivity"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
+            android:name=".RoleSelectionActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".LoginCourierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterCourierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterUserActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

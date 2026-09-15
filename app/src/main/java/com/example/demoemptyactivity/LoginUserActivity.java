@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class RegisterActivity extends AppCompatActivity {
+public class LoginUserActivity extends AppCompatActivity {
 
     private EditText etLogin;
     private EditText etPassword;
@@ -21,7 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_login_user);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -38,17 +38,14 @@ public class RegisterActivity extends AppCompatActivity {
             String password = etPassword.getText().toString().trim();
 
             if (login.isEmpty()) {
-                etLogin.setError("Podaj login lub numer!");
+                etLogin.setError("Podaj login lub e-mail!");
                 etLogin.requestFocus();
             } else if (password.isEmpty()) {
                 etPassword.setError("Wpisz hasło!");
                 etPassword.requestFocus();
-            } else if (password.length() < 4) {
-                etPassword.setError("Hasło musi mieć co najmniej 4 znaki!");
-                etPassword.requestFocus();
             } else {
-                String message = "Zarejestrowano pomyślnie: " + login;
-                Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+                String message = "Zalogowano pomyślnie: " + login;
+                Toast.makeText(LoginUserActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         });
     }
