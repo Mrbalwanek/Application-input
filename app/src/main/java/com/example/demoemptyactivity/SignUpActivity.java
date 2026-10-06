@@ -3,7 +3,6 @@ package com.example.demoemptyactivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,26 +10,21 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sign_up);
 
-        Button registerBtn = findViewById(R.id.btn1);
-        Button loginBtn = findViewById(R.id.btn2);
+        Button backBtn = findViewById(R.id.btn_back);
 
-        loginBtn.setOnClickListener(v ->{
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        backBtn.setOnClickListener(v ->{
+            Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
             startActivity(intent);
         });
 
-        registerBtn.setOnClickListener(v ->{
-            Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
-            startActivity(intent);
-        });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -38,3 +32,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
+
